@@ -17,7 +17,7 @@
 
       - name: "Clone the Spring repository"
         git:
-            repo: "https://github.com/tsadimasteaching/ds-lab-2023.git"
+            repo: "https://github.com/danai2021036/aimodosia.git"
             dest: "{{ appdir }}"
             version: "{{ branch }}"
             force: yes
@@ -30,6 +30,11 @@
           line: "{{item.key}}={{item.value}}"
         with_items:
           - "{{app.env | dict2items}}"
+
+      - name: "Ensure mvnw is executable"
+        file:
+          path: "{{ appdir }}/mvnw"
+          mode: '0755'
 
       - name: "Build the Spring application"
         command: "./mvnw package -Dmaven.test.skip "

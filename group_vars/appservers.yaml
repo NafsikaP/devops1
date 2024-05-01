@@ -4,4 +4,4 @@ appuser: "{{ansible_user_id}}"
 appgroup: "{{ansible_user_gid}}"
 app_port: 9090
 app:
-  VITE_BACKEND:  http://192.168.56.103
+  VITE_BACKEND:  http://4.211.130.207

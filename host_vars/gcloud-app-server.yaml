@@ -1,10 +1,15 @@
+appdir: "/home/it2021077/spring"
+branch: "api"
+appuser: "it2021077"
+appgroup: "it2021077"
+app_port: 9090
 app:
   env:
-    server.port: "{{app_port}}"
+    server.port: 9090
     spring.datasource.username: appuser
     spring.datasource.password: apppassword
-    spring.datasource.url: jdbc:postgresql://4.211.249.239:5432/appdb
+    spring.datasource.url: jdbc:postgresql://4.233.185.183:5432/appdb
 
 service:
-  workingdir: "/home/rg/spring"
-  execstart: "java -jar target/springbootdemo-0.0.1-SNAPSHOT.jar"
+  workingdir: "/home/it2021077/spring"
+  execstart: "java -jar target/demo-0.0.1-SNAPSHOT.jar"
