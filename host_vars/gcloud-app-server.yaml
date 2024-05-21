@@ -1,7 +1,7 @@
 appdir: "/home/it2021077/spring"
 branch: "api"
-appuser: "it2021077"
-appgroup: "it2021077"
+appuser: "{{ansible_user_id}}"
+appgroup: "{{ansible_user_gid}}"
 app_port: 9090
 app:
   env:
