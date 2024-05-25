@@ -4,7 +4,7 @@
   tasks:
     - name: Install basic packages
       apt:
-        name: "{{item}}"
+        name: "{{ item }}"
         state: present
         update_cache: true
       loop:
@@ -25,7 +25,7 @@
 
     - name: install docker
       apt:
-        name: "{{item}}"
+        name: "{{ item }}"
         state: present
         update_cache: true
       loop:
