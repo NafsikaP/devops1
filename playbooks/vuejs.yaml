@@ -75,7 +75,7 @@
         regexp: "^{{item.key}}="
         line: "{{item.key}}='{{item.value}}'"
       with_items:
-        - "{{appfrontend | dict2items}}"
+        - "{{app | dict2items}}" #WAS APPFRONTEND
 
 
     - name: "Install dependencies"
