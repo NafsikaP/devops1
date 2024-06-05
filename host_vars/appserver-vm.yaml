@@ -9,5 +9,5 @@ service:
   workingdir: "{{ ansible_user_dir }}/spring"
   execstart: "java -jar target/demo-0.0.1-SNAPSHOT.jar"
 
-appfrontend:
-  VITE_BACKEND:  http://4.233.185.183:9090
+# appfrontend:
+#   VITE_BACKEND:  http://4.233.185.183:9090
