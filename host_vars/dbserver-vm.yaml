@@ -1,4 +1,4 @@
 db:
-  name: "appdb"
+  name: "appdb1"
   user: "appuser"
   password: "apppassword"

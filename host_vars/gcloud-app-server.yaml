@@ -8,7 +8,7 @@ app:
     server.port: 9090
     spring.datasource.username: appuser
     spring.datasource.password: apppassword
-    spring.datasource.url: jdbc:postgresql://4.233.185.183:5432/appdb
+    spring.datasource.url: jdbc:postgresql://4.233.185.183:5432/appdb1
 
 service:
   workingdir: "/home/it2021077/spring"
