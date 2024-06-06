@@ -4,6 +4,7 @@ app:
     spring.datasource.username: appuser
     spring.datasource.password: apppassword
     spring.datasource.url: jdbc:postgresql://dbserver:5432/appdb1
+    VITE_BACKEND:  http://51.13.41.31:9090
     
 service:
   workingdir: "{{ ansible_user_dir }}/spring"
