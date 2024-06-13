@@ -5,4 +5,4 @@ appgroup: "{{ansible_user_gid}}"
 app_port: 9090
 backend_server_url: "http://35.233.25.168:9090"
 app:
-  VITE_BACKEND:  http://4.211.130.207
+  VITE_BACKEND:  http://4.211.130.207:9000
