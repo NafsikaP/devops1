@@ -11,6 +11,6 @@ frontendappdir: "{{ ansible_user_dir }}/frontend"
 branch: "devops"
 site_location: /var/www/vue
 frontendvm_ip: 13234
-port_frontend: 9000
+port_frontend: 80
 backendvm_ip: 13453
 port_backend: 9090
