@@ -1,2 +1,2 @@
-appdir: "{{ ansible_user_dir }}/spring"
+appdir: "jenkins/spring"
 branch: "api"
