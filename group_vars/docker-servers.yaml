@@ -1,0 +1,2 @@
+appdir: "{{ ansible_user_dir }}/spring"
+branch: "api"

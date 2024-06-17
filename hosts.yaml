@@ -14,6 +14,10 @@ control:
 #         ansible_host: devopsvm2
 #       gcloud-app-server:
 #         ansible_host: devops-gcloud
+docker-servers:
+  hosts:
+      dockervm:
+          ansible_host: appserver
 
 dbservers:
     hosts:

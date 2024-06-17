@@ -23,14 +23,14 @@
         version: "{{ branch }}"
         force: yes
 
-    - name: "Populate application.properties"
-      lineinfile:
-        dest: "{{ appdir }}/src/main/resources/application.properties"
-        state: present
-        regexp: "^{{item.key}}="
-        line: "{{item.key}}={{item.value}}"
-      with_items:
-        - "{{app.env | dict2items}}"
+    # - name: "Populate application.properties"
+    #   lineinfile:
+    #     dest: "{{ appdir }}/src/main/resources/application.properties"
+    #     state: present
+    #     regexp: "^{{item.key}}="
+    #     line: "{{item.key}}={{item.value}}"
+    #   with_items:
+    #     - "{{app.env | dict2items}}"
 
     - name: Tear down existing services
       community.docker.docker_compose:
