@@ -1,0 +1,16 @@
+appdir: "{{ ansible_user_dir }}/spring"
+branch: "devops"
+appuser: "{{ansible_user_id}}"
+appgroup: "{{ansible_user_gid}}"
+app_port: 9090
+backend_server_url: "http://35.233.25.168:9090"
+app:
+  VITE_BACKEND:  http://{{ frontendvm_ip }}:{{ port_frontend }}
+
+frontendappdir: "{{ ansible_user_dir }}/frontend"
+branch: "devops"
+site_location: /var/www/vue
+frontendvm_ip: 13234
+port_frontend: 9000
+backendvm_ip: 13453
+port_backend: 9090
