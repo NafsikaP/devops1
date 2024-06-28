@@ -1,6 +1,8 @@
 ---
 - hosts: docker-servers
   become: yes
+  vars:
+    sendgrid_key: "{{ lookup('env', 'SENDGRID_KEY') }}"
   tasks:
 
     - name: Check if Docker is installed
@@ -31,7 +33,13 @@
     #     line: "{{item.key}}={{item.value}}"
     #   with_items:
     #     - "{{app.env | dict2items}}"
-
+    - name: "Populate application.properties with SendGrid Key"
+      lineinfile:
+        dest: "{{ appdir }}/src/main/resources/application.properties"
+        state: present
+        regexp: "^sendgrid.key="
+        line: "sendgrid.key={{ sendgrid_key }}"
+        
     - name: Tear down existing services
       community.docker.docker_compose:
         project_src: "{{ appdir }}"
