@@ -1,6 +1,8 @@
 ---
 - hosts: all
-
+  vars:
+    sendgrid_key: "{{ lookup('env', 'SENDGRID_KEY') }}"
+    appdir: "{{ ansible_user_dir }}/aimodosia"
 
   pre_tasks:
       - name: Install Java
@@ -22,6 +24,13 @@
             version: "{{ branch }}"
             force: yes
 
+      - name: Populate application.properties with SendGrid Key
+        lineinfile:
+          dest: "{{ appdir }}/src/main/resources/application.properties"
+          state: present
+          regexp: "^sendgrid.key="
+          line: "sendgrid.key={{ sendgrid_key }}"
+          
       - name: "Populate application.properties"
         lineinfile:
           dest: "{{ appdir }}/src/main/resources/application.properties"
